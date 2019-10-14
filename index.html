@@ -68,7 +68,7 @@
 	
 			function revealio() {
 				var date = new Date()
-				var isWithinTimeframe = date.getHours() === 10 && date.getMinutes() >= 44;
+				var isWithinTimeframe = (date.getHours() === 10 || date.getHours() === 20) && date.getMinutes() >= 44;
 				if (isWithinTimeframe && noise.className.indexOf('blink') === -1) {
 					message.style.opacity = 1;
 					noise.classList.add('blink');
